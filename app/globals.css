@@ -1,0 +1,73 @@
+:root {
+  --background: #FFFFFF;
+  --foreground: #1C1917;
+  --pastel-pink: #D4A59A;
+  --soft-cream: #FFFCFA;
+  --border-color: #E7E5E4;
+  --muted-text: #78716C;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.7;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.25s ease, opacity 0.25s ease;
+}
+
+a:hover {
+  color: var(--pastel-pink);
+  opacity: 0.8;
+}
+
+::selection {
+  background-color: #FFE7E1;
+  color: var(--foreground);
+}
+
+/* Ultra-minimal scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E7E5E4;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D6D3D1;
+}
+
+/* Clean focus states */
+:focus-visible {
+  outline: 2px solid var(--pastel-pink);
+  outline-offset: 2px;
+}
